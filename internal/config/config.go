@@ -12,6 +12,7 @@ type Config struct {
 	Env        string `yaml:"env"`
 	Database   `yaml:"database"`
 	HTTPServer `yaml:"http_server"`
+	SerialPort SerialPort `yaml:"serial_port"`
 }
 
 type Database struct {
@@ -22,6 +23,11 @@ type Database struct {
 
 type HTTPServer struct {
 	Address string `yaml:"address"`
+}
+
+type SerialPort struct {
+	Name string `yaml:"name"`
+	Baud int    `yaml:"baud"`
 }
 
 func LoadConfig() *Config {

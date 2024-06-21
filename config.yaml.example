@@ -7,3 +7,11 @@ database:
 
 http_server:
   address: ""
+
+grpc_server:
+  address: "localhost:50051"
+
+
+serial_port:
+  name: "COM14"
+  baud: 115200
